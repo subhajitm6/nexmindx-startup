@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Instagram, Linkedin, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 const Footer = () => {
@@ -16,7 +17,7 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <img src={logo} alt="Nexmind Logo" className="h-8 w-auto object-contain mix-blend-screen" />
+              <img src={logo} alt="Nexmind Logo" className="h-10 w-auto object-contain" />
             </div>
             <p className="text-gray-500 mb-8 max-w-xs">
               Architecting the next generation of SaaS and AI applications with precision engineering and elite talent.
@@ -51,11 +52,21 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-6 tracking-wider uppercase text-xs">Company</h4>
             <ul className="space-y-4">
-              {['Our Process', 'Portfolio', 'Careers', 'Privacy Policy', 'Security'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-gray-500 hover:text-primary transition-colors text-sm">{link}</a>
-                </li>
-              ))}
+              <li key="Our Process">
+                <a href="#" className="text-gray-500 hover:text-primary transition-colors text-sm">Our Process</a>
+              </li>
+              <li key="Portfolio">
+                <a href="#" className="text-gray-500 hover:text-primary transition-colors text-sm">Portfolio</a>
+              </li>
+              <li key="Careers">
+                <Link to="/careers" className="text-gray-500 hover:text-primary transition-colors text-sm">Careers</Link>
+              </li>
+              <li key="Privacy Policy">
+                <a href="#" className="text-gray-500 hover:text-primary transition-colors text-sm">Privacy Policy</a>
+              </li>
+              <li key="Security">
+                <a href="#" className="text-gray-500 hover:text-primary transition-colors text-sm">Security</a>
+              </li>
             </ul>
           </div>
 
