@@ -89,7 +89,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-gray-600 text-sm">
-            © {currentYear} Nexmind Engineering Corp. All rights reserved.
+            © {currentYear} NexmindX Technologies. All rights reserved.
           </p>
           <div className="flex gap-8 text-sm text-gray-600">
             <a href="#" className="hover:text-white transition-colors">Privacy</a>
