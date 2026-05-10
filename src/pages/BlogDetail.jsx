@@ -39,7 +39,7 @@ const BlogDetail = () => {
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center gap-3 mb-6"
           >
-            <span className="px-3 py-1 text-xs font-semibold bg-primary/20 text-primary border border-primary/30 rounded-full uppercase tracking-wider">
+            <span className="px-3 py-1 text-xs font-bold bg-primary/20 text-primary border border-primary/30 rounded-full uppercase tracking-[0.15em] font-display">
               {post.category}
             </span>
             <div className="h-px w-12 bg-white/10" />
@@ -52,7 +52,7 @@ const BlogDetail = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight"
+            className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight leading-[1.1]"
           >
             {post.title}
           </motion.h1>
@@ -108,19 +108,19 @@ const BlogDetail = () => {
             const [title, ...content] = section.split('\n');
             return (
               <div key={idx} className="mb-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 tracking-tight flex items-center gap-4">
                   <span className="text-primary">#</span> {title.trim()}
                 </h2>
-                <div className="text-gray-400 leading-relaxed space-y-6">
+                <div className="text-slate-300 leading-[1.8] space-y-6 font-medium">
                   {content.join('\n').split('\n\n').map((para, pIdx) => (
                     para.trim() && (
                       para.startsWith('-') || para.startsWith('*') || /^\d\./.test(para.trim())
                       ? <ul key={pIdx} className="list-disc list-inside space-y-3 ml-4">
                           {para.split('\n').map((li, liIdx) => (
-                            <li key={liIdx} className="text-gray-400">{li.replace(/^[\-\*]\s*/, '').replace(/^\d\.\s*/, '')}</li>
+                            <li key={liIdx} className="text-slate-300">{li.replace(/^[\-\*]\s*/, '').replace(/^\d\.\s*/, '')}</li>
                           ))}
                         </ul>
-                      : <p key={pIdx} className="text-lg">{para.trim()}</p>
+                      : <p key={pIdx} className="text-lg leading-[1.8]">{para.trim()}</p>
                     )
                   ))}
                 </div>

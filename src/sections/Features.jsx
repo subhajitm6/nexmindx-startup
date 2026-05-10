@@ -37,7 +37,7 @@ const Features = () => {
               Why Leaders Choose <br />
               <span className="text-gradient">Nexmind Engineering</span>
             </h2>
-            <p className="text-gray-400 text-lg mb-12">
+            <p className="text-slate-400 text-lg mb-12 leading-relaxed">
               We don't just build software; we architect the digital backbone of your enterprise. Our processes are designed for reliability, scalability, and absolute security.
             </p>
 
@@ -56,7 +56,7 @@ const Features = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">{point.title}</h3>
-                    <p className="text-gray-400 leading-relaxed">{point.desc}</p>
+                    <p className="text-slate-400 leading-relaxed">{point.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -69,11 +69,11 @@ const Features = () => {
               transition={{ delay: 0.8 }}
               className="mt-12 p-6 glass-card rounded-2xl border-l-4 border-primary"
             >
-              <div className="flex items-center gap-4 mb-3">
-                <CheckCircle2 className="text-primary" />
-                <span className="font-bold text-white uppercase tracking-wider text-sm">Deployment Ready</span>
+              <div className="flex items-center gap-4 mb-3 font-display">
+                <CheckCircle2 className="text-primary" size={18} />
+                <span className="font-bold text-white uppercase tracking-[0.15em] text-xs">Deployment Ready</span>
               </div>
-              <p className="text-gray-400 italic">
+              <p className="text-slate-300 italic leading-relaxed">
                 "Nexmind delivered our core infrastructure 2 weeks ahead of schedule with 99.99% uptime during the critical launch phase."
               </p>
             </motion.div>
@@ -113,7 +113,7 @@ const Features = () => {
                   className="absolute bottom-8 left-8 right-8 glass p-6 rounded-2xl border border-white/10"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-bold text-primary tracking-widest uppercase">System Status</span>
+                    <span className="text-xs font-bold text-primary tracking-widest uppercase font-display">System Status</span>
                     <span className="text-xs text-green-400 flex items-center gap-1">
                       <div className="w-1.5 h-1.5 rounded-full bg-green-400" /> Operational
                     </span>

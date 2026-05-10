@@ -53,7 +53,7 @@ const Testimonials = () => {
               </div>
               
               <div className="relative z-10">
-                <p className="text-gray-300 text-lg leading-relaxed mb-8 italic">
+                <p className="text-slate-300 text-lg leading-relaxed mb-8 font-medium italic">
                   "{item.text}"
                 </p>
                 
@@ -62,8 +62,8 @@ const Testimonials = () => {
                     {item.avatar}
                   </div>
                   <div>
-                    <h4 className="text-white font-bold">{item.name}</h4>
-                    <p className="text-gray-500 text-sm">{item.role}</p>
+                    <h4 className="text-white font-bold font-display">{item.name}</h4>
+                    <p className="text-slate-500 text-sm font-medium">{item.role}</p>
                   </div>
                 </div>
               </div>

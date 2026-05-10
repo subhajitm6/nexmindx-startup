@@ -16,7 +16,7 @@ const Blog = () => {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
+            className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-6"
           >
             Insights & <span className="text-gradient">Articles</span>
           </motion.h1>
@@ -25,7 +25,7 @@ const Blog = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-gray-400 max-w-2xl mx-auto"
+            className="text-xl text-slate-400 max-w-2xl mx-auto font-medium"
           >
             Latest thoughts on SaaS, AI foundations, and engineering excellence from the Nexmind team.
           </motion.p>
@@ -39,10 +39,10 @@ const Blog = () => {
             {['All Posts', 'AI', 'SaaS', 'Engineering', 'Company'].map((tag) => (
               <button
                 key={tag}
-                className={`px-4 py-2 rounded-xl text-sm font-medium transition-all whitespace-nowrap ${
+                className={`px-4 py-2 rounded-xl text-sm font-medium transition-all whitespace-nowrap font-display tracking-wide ${
                   tag === 'All Posts' 
                   ? 'bg-primary text-white shadow-[0_0_15px_rgba(59,130,246,0.5)]' 
-                  : 'text-gray-400 hover:text-white hover:bg-white/5'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
                 }`}
               >
                 {tag}
@@ -73,13 +73,13 @@ const Blog = () => {
       <section className="container mx-auto px-6 mt-32">
         <div className="relative glass-card rounded-3xl p-12 overflow-hidden text-center">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-secondary/10 blur-[100px] rounded-full -z-10" />
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">
             Want to build something like this?
           </h2>
-          <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-slate-400 text-lg font-medium mb-8 max-w-xl mx-auto">
             Join the elite teams of engineers building the next generation of SaaS.
           </p>
-          <button className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-full font-bold text-lg transition-all shadow-xl hover:shadow-2xl">
+          <button className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-full font-semibold tracking-wide font-display text-lg transition-all shadow-xl hover:shadow-2xl">
             Start Your Project
           </button>
         </div>

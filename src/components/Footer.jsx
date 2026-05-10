@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-6">
               <img src={logo} alt="Nexmind Logo" className="h-16 w-auto object-contain" />
             </div>
-            <p className="text-gray-500 mb-8 max-w-xs">
+            <p className="text-slate-500 mb-8 max-w-xs text-sm leading-relaxed">
               Architecting the next generation of SaaS and AI applications with precision engineering and elite talent.
             </p>
             <div className="flex gap-4">
@@ -38,11 +38,11 @@ const Footer = () => {
 
           {/* Links 1 */}
           <div>
-            <h4 className="text-white font-bold mb-6 tracking-wider uppercase text-xs">Solutions</h4>
+            <h4 className="text-white font-bold mb-6 tracking-[0.15em] uppercase text-xs font-display">Solutions</h4>
             <ul className="space-y-4">
               {['Custom Software', 'SaaS Platforms', 'AI Integration', 'Cloud Native'].map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-gray-500 hover:text-primary transition-colors text-sm">{link}</a>
+                  <a href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">{link}</a>
                 </li>
               ))}
             </ul>
@@ -50,30 +50,30 @@ const Footer = () => {
 
           {/* Links 2 */}
           <div>
-            <h4 className="text-white font-bold mb-6 tracking-wider uppercase text-xs">Company</h4>
+            <h4 className="text-white font-bold mb-6 tracking-[0.15em] uppercase text-xs font-display">Company</h4>
             <ul className="space-y-4">
               <li key="Our Process">
-                <a href="#" className="text-gray-500 hover:text-primary transition-colors text-sm">Our Process</a>
+                <a href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">Our Process</a>
               </li>
               <li key="Portfolio">
-                <a href="#" className="text-gray-500 hover:text-primary transition-colors text-sm">Portfolio</a>
+                <a href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">Portfolio</a>
               </li>
               <li key="Careers">
-                <Link to="/careers" className="text-gray-500 hover:text-primary transition-colors text-sm">Careers</Link>
+                <Link to="/careers" className="text-slate-400 hover:text-primary transition-colors text-sm">Careers</Link>
               </li>
               <li key="Privacy Policy">
-                <a href="#" className="text-gray-500 hover:text-primary transition-colors text-sm">Privacy Policy</a>
+                <a href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">Privacy Policy</a>
               </li>
               <li key="Security">
-                <a href="#" className="text-gray-500 hover:text-primary transition-colors text-sm">Security</a>
+                <a href="#" className="text-slate-400 hover:text-primary transition-colors text-sm">Security</a>
               </li>
             </ul>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-white font-bold mb-6 tracking-wider uppercase text-xs">Digital Signal</h4>
-            <p className="text-gray-500 text-sm mb-6">Receive architectural updates and tech stack insights.</p>
+            <h4 className="text-white font-bold mb-6 tracking-[0.15em] uppercase text-xs font-display">Digital Signal</h4>
+            <p className="text-slate-400 text-sm mb-6">Receive architectural updates and tech stack insights.</p>
             <div className="relative">
               <input
                 type="email"

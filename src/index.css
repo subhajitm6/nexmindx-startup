@@ -9,23 +9,47 @@
   --color-glass-border: rgba(255, 255, 255, 0.1);
   
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Outfit', var(--font-sans);
+  --font-heading: 'Sora', var(--font-sans);
+  --font-display: 'Space Grotesk', var(--font-sans);
 
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
-    color: #d1d5db; /* gray-300 */
+    color: #cbd5e1; /* slate-300 - smooth premium contrast */
     font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 1.75;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (pointer: fine) {
+    body {
+      cursor: none;
+    }
+    a, button, input, select, textarea, [role="button"] {
+      cursor: none;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: white;
+    color: #f8fafc; /* slate-50 - soft white */
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    color: #94a3b8; /* slate-400 */
   }
 }
 

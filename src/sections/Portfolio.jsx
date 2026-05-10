@@ -33,14 +33,14 @@ const Portfolio = () => {
             >
               Selected <span className="text-gradient">Projects</span>
             </motion.h2>
-            <p className="text-gray-400 text-lg">
+            <p className="text-slate-400 text-lg font-medium">
               Showcasing our recent engineering milestones and the innovative solutions we've delivered.
             </p>
           </div>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 glass rounded-xl text-white font-bold border border-white/10 hover:border-primary/50 transition-all"
+            className="px-8 py-3 glass rounded-xl text-white font-semibold tracking-wide font-display border border-white/10 hover:border-primary/50 transition-all"
           >
             View All Work
           </motion.button>
@@ -78,13 +78,13 @@ const Portfolio = () => {
               {/* Text Content */}
               <div className="mt-8">
                 <div className="flex items-center gap-4 mb-3">
-                  <span className="text-xs font-bold text-primary tracking-widest uppercase">{project.category}</span>
+                  <span className="text-xs font-bold text-primary tracking-[0.2em] uppercase font-display">{project.category}</span>
                   <div className="w-12 h-px bg-white/10" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 text-lg">
+                <p className="text-slate-400">
                   {project.desc}
                 </p>
               </div>

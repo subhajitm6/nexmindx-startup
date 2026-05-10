@@ -32,11 +32,11 @@ const CTA = () => {
               <Zap className="text-primary fill-primary" size={40} />
             </motion.div>
 
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 max-w-3xl leading-tight">
-              Let’s Build Your <span className="text-gradient underline decoration-primary/30 underline-offset-8">Next Big Idea</span>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.15] mb-8 max-w-3xl">
+              Let’s Build Your <br /> <span className="text-gradient">Next Big Idea</span>
             </h2>
             
-            <p className="text-gray-400 text-lg mb-12 max-w-xl">
+            <p className="text-slate-400 text-lg font-medium mb-12 max-w-xl leading-relaxed">
               Ready to engineer a solution that markets will love? Our team is standing by to help you scale.
             </p>
 
@@ -44,7 +44,7 @@ const CTA = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-10 py-5 bg-primary text-white rounded-2xl font-bold flex items-center gap-3 transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:shadow-primary/50"
+                className="px-10 py-5 bg-primary text-white rounded-2xl font-semibold tracking-wide font-display flex items-center gap-3 transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:shadow-primary/50"
               >
                 Start Your Project <Send size={20} />
               </motion.button>
@@ -52,16 +52,16 @@ const CTA = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-10 py-5 glass text-white rounded-2xl font-bold border border-white/10 hover:bg-white/5 transition-all"
+                className="px-10 py-5 glass text-white rounded-2xl font-semibold tracking-wide font-display border border-white/10 hover:bg-white/5 transition-all"
               >
                 Schedule Consultation
               </motion.button>
             </div>
             
             <div className="mt-16 pt-8 border-t border-white/5 w-full flex flex-wrap justify-center gap-10 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-              <span className="font-bold tracking-widest text-sm">SECURE_DEV</span>
-              <span className="font-bold tracking-widest text-sm">AGILE_STACK</span>
-              <span className="font-bold tracking-widest text-sm">LLM_READY</span>
+              <span className="font-bold tracking-[0.2em] text-xs font-display">SECURE_DEV</span>
+              <span className="font-bold tracking-[0.2em] text-xs font-display">AGILE_STACK</span>
+              <span className="font-bold tracking-[0.2em] text-xs font-display">LLM_READY</span>
             </div>
           </div>
         </motion.div>

@@ -15,7 +15,7 @@ const JobCard = ({ job, index }) => {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-3">
-            <span className="px-3 py-1 text-xs font-semibold bg-primary/10 text-primary border border-primary/20 rounded-full">
+            <span className="px-3 py-1 text-xs font-bold bg-primary/10 text-primary border border-primary/20 rounded-full tracking-wide font-display">
               {job.category}
             </span>
             <span className="flex items-center gap-1 text-xs text-secondary">
@@ -27,7 +27,7 @@ const JobCard = ({ job, index }) => {
             {job.title}
           </h3>
           
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-4">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 mb-4 font-medium">
             <div className="flex items-center gap-1">
               <MapPin size={16} className="text-accent" />
               {job.location}
@@ -38,7 +38,7 @@ const JobCard = ({ job, index }) => {
             </div>
           </div>
           
-          <p className="text-gray-500 text-sm line-clamp-2 max-w-2xl">
+          <p className="text-slate-400 text-sm line-clamp-2 max-w-2xl font-medium leading-relaxed">
             {job.description}
           </p>
         </div>
@@ -58,7 +58,7 @@ const JobCard = ({ job, index }) => {
 
         <Link
           to={`/careers/${job.id}`}
-          className="flex items-center justify-center gap-2 px-6 py-3 bg-white/5 hover:bg-primary text-white rounded-xl font-semibold transition-all group/btn"
+          className="flex items-center justify-center gap-2 px-6 py-3 bg-white/5 hover:bg-primary text-white rounded-xl font-semibold tracking-wide font-display transition-all group/btn"
         >
           Apply Now
           <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />

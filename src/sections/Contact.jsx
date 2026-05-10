@@ -66,7 +66,7 @@ const Contact = () => {
               Initiate <br />
               <span className="text-gradient">Transmission</span>
             </motion.h2>
-            <p className="text-gray-400 text-lg mb-12 max-w-md">
+            <p className="text-slate-400 text-lg mb-12 max-w-md font-medium">
               Whether you're looking for a full-scale SaaS build or targeted AI integration, our team is ready to discuss your architecture.
             </p>
 
@@ -88,7 +88,7 @@ const Contact = () => {
                     {item.icon}
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">{item.label}</p>
+                    <p className="text-xs font-bold text-slate-500 uppercase tracking-[0.15em] mb-1 font-display">{item.label}</p>
                     <p className="text-white font-medium group-hover:text-primary transition-colors">{item.value}</p>
                   </div>
                 </motion.div>
@@ -132,7 +132,7 @@ const Contact = () => {
               ) : (
                 <form key="form" onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-400 ml-1">Identity</label>
+                    <label className="text-sm font-semibold text-slate-300 ml-1 font-display tracking-wide">Identity</label>
                     <div className="relative group">
                       <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-primary transition-colors" size={20} />
                       <input
@@ -148,7 +148,7 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-400 ml-1">Digital Address</label>
+                    <label className="text-sm font-semibold text-slate-300 ml-1 font-display tracking-wide">Digital Address</label>
                     <div className="relative group">
                       <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-primary transition-colors" size={20} />
                       <input
@@ -164,7 +164,7 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-400 ml-1">Encrypted Message</label>
+                    <label className="text-sm font-semibold text-slate-300 ml-1 font-display tracking-wide">Encrypted Message</label>
                     <div className="relative group flex items-start">
                       <MessageSquare className="absolute left-4 top-5 text-gray-500 group-focus-within:text-primary transition-colors" size={20} />
                       <textarea
@@ -193,7 +193,7 @@ const Contact = () => {
                     disabled={status === 'sending'}
                     whileHover={{ scale: status === 'sending' ? 1 : 1.02 }}
                     whileTap={{ scale: status === 'sending' ? 1 : 0.98 }}
-                    className={`w-full py-4 bg-primary text-white rounded-2xl font-bold flex items-center justify-center gap-3 transition-all shadow-lg hover:shadow-primary/40 ${
+                    className={`w-full py-4 bg-primary text-white rounded-2xl font-semibold tracking-wide font-display flex items-center justify-center gap-3 transition-all shadow-lg hover:shadow-primary/40 ${
                       status === 'sending' ? 'opacity-70 cursor-not-allowed' : ''
                     }`}
                   >

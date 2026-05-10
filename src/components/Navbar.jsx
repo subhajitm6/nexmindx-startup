@@ -17,6 +17,7 @@ const navLinks = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -46,8 +47,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-4 bg-background/80 backdrop-blur-lg border-b border-glass-border shadow-xl' : 'py-6 bg-transparent'
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled 
+          ? 'py-3 bg-background/70 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-primary/5' 
+          : 'py-6 bg-transparent backdrop-blur-sm'
+      }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
@@ -62,37 +66,76 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link, index) => (
-            <motion.div
-              key={link.name}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            >
-              {link.hash ? (
-                <button
-                  onClick={() => handleNavClick(link)}
-                  className="text-sm font-medium text-gray-400 hover:text-white transition-colors relative group"
+        <div 
+          className="hidden md:flex items-center gap-2 p-1.5 rounded-full bg-white/5 border border-white/5 backdrop-blur-md relative"
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
+          {navLinks.map((link, index) => {
+            const isActive = location.pathname === link.href;
+            
+            return (
+              <motion.div
+                key={link.name}
+                className="relative z-10"
+                onMouseEnter={() => setHoveredIndex(index)}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+              >
+                {/* Hover Background Pill */}
+                {hoveredIndex === index && (
+                  <motion.div
+                    layoutId="nav-pill"
+                    className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/10 to-primary/10 rounded-full -z-10 border border-primary/20 shadow-[0_0_15px_rgba(59,130,246,0.15)]"
+                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                  />
+                )}
+
+                {/* Interactive Nav Wrapper */}
+                <motion.div
+                  whileHover={{ y: -2 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
-                  {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-                </button>
-              ) : (
-                <Link
-                  to={link.href}
-                  className={`text-sm font-medium transition-colors relative group ${
-                    location.pathname === link.href ? 'text-primary' : 'text-gray-400 hover:text-white'
-                  }`}
-                >
-                  {link.name}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
-                    location.pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`} />
-                </Link>
-              )}
-            </motion.div>
-          ))}
+                  {link.hash ? (
+                    <button
+                      onClick={() => handleNavClick(link)}
+                      className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors font-display flex items-center relative group tracking-wide"
+                    >
+                      <motion.span
+                        animate={{ letterSpacing: hoveredIndex === index ? "0.05em" : "0.025em" }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        {link.name}
+                      </motion.span>
+                    </button>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      className={`px-4 py-2 text-sm font-medium transition-colors font-display flex items-center relative group tracking-wide ${
+                        isActive ? 'text-white font-semibold' : 'text-slate-300 hover:text-white'
+                      }`}
+                    >
+                      <motion.span
+                        animate={{ letterSpacing: hoveredIndex === index ? "0.05em" : "0.025em" }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        {link.name}
+                      </motion.span>
+                      
+                      {/* Active Dot/Line Indicator */}
+                      {isActive && (
+                        <motion.div
+                          layoutId="active-indicator"
+                          className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-cyan-400 rounded-full shadow-[0_0_8px_rgba(34,211,238,0.8)]"
+                          transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                        />
+                      )}
+                    </Link>
+                  )}
+                </motion.div>
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* CTA Button */}
@@ -102,10 +145,10 @@ const Navbar = () => {
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-2.5 bg-primary hover:bg-primary/90 text-white rounded-full font-semibold flex items-center gap-2 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)]"
+            className="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-full font-semibold tracking-wide font-display flex items-center gap-2 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)]"
           >
             Get Started
-            <ArrowRight size={18} />
+            <ArrowRight size={16} />
           </motion.button>
         </div>
 

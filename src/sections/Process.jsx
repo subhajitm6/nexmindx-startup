@@ -46,7 +46,7 @@ const Process = () => {
           >
             Our Execution <span className="text-gradient">Pipeline</span>
           </motion.h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto font-medium">
             A precise, transparent roadmap from initial concept to global scale.
           </p>
         </div>
@@ -70,7 +70,7 @@ const Process = () => {
                 
                 {/* Indicator Circle */}
                 <div className="relative z-10 w-24 h-24 mx-auto lg:mx-0 rounded-3xl glass border border-white/10 flex items-center justify-center mb-8 bg-gradient-to-br from-white/5 to-transparent transition-all duration-300 group-hover:border-primary/50 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
-                  <span className="text-3xl font-bold text-white group-hover:text-primary transition-colors">
+                  <span className="text-3xl font-bold text-white group-hover:text-primary transition-colors font-display tracking-tight">
                     {step.id}
                   </span>
                   
@@ -81,7 +81,7 @@ const Process = () => {
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-primary transition-colors">
                   {step.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                <p className="text-slate-400 leading-relaxed text-sm md:text-base">
                   {step.subtitle}
                 </p>
 

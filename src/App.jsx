@@ -7,6 +7,7 @@ import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import Careers from './pages/Careers';
 import JobDetail from './pages/JobDetail';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className="bg-background text-gray-300 min-h-screen selection:bg-primary/30">
+      <CustomCursor />
       <Navbar />
       <main>
         <Routes>

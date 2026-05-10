@@ -45,10 +45,10 @@ const JobDetail = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="flex items-center gap-3 mb-6"
               >
-                <span className="px-3 py-1 text-xs font-semibold bg-primary/20 text-primary border border-primary/30 rounded-full uppercase tracking-wider">
+                <span className="px-3 py-1 text-xs font-bold bg-primary/20 text-primary border border-primary/30 rounded-full uppercase tracking-[0.15em] font-display">
                   {job.category}
                 </span>
-                <span className="text-sm text-gray-500 flex items-center gap-1">
+                <span className="text-sm text-slate-500 flex items-center gap-1 font-medium">
                   <Clock size={16} className="text-secondary" /> {job.type}
                 </span>
               </motion.div>
@@ -57,7 +57,7 @@ const JobDetail = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-4xl md:text-6xl font-bold text-white mb-6"
+                className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6"
               >
                 {job.title}
               </motion.h1>
@@ -84,7 +84,7 @@ const JobDetail = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
               onClick={() => document.getElementById('apply-form').scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-primary/30"
+              className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-semibold tracking-wide font-display text-lg transition-all shadow-lg hover:shadow-primary/30"
             >
               Apply for this role
             </motion.button>
@@ -97,7 +97,7 @@ const JobDetail = () => {
             {/* Description */}
             <section>
               <h2 className="text-2xl font-bold text-white mb-6">About the Role</h2>
-              <p className="text-gray-400 text-lg leading-relaxed">
+              <p className="text-slate-400 text-lg leading-relaxed font-medium">
                 {job.description}
               </p>
             </section>
@@ -107,7 +107,7 @@ const JobDetail = () => {
               <h2 className="text-2xl font-bold text-white mb-6">Key Responsibilities</h2>
               <ul className="space-y-4">
                 {job.responsibilities.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-gray-400 text-lg">
+                  <li key={idx} className="flex items-start gap-3 text-slate-400 text-lg font-medium leading-relaxed">
                     <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
                     {item}
                   </li>
@@ -120,7 +120,7 @@ const JobDetail = () => {
               <h2 className="text-2xl font-bold text-white mb-6">Requirements</h2>
               <ul className="space-y-4">
                 {job.requirements.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-gray-400 text-lg">
+                  <li key={idx} className="flex items-start gap-3 text-slate-400 text-lg font-medium leading-relaxed">
                     <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0" />
                     {item}
                   </li>

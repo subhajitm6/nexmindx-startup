@@ -46,12 +46,12 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            <span className="text-sm font-medium text-primary">New: AI-Native SaaS Solutions</span>
+            <span className="text-sm font-medium text-primary tracking-wide font-display">New: AI-Native SaaS Solutions</span>
           </motion.div>
 
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl font-bold leading-tight mb-6"
+            className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-6"
           >
             Engineering the <br />
             <span className="text-gradient">Future of SaaS</span>
@@ -68,10 +68,10 @@ const Hero = () => {
             variants={itemVariants}
             className="flex flex-wrap gap-4"
           >
-            <button className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold flex items-center gap-2 transition-all shadow-lg hover:shadow-primary/50">
+            <button className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-semibold tracking-wide flex items-center gap-2 transition-all shadow-lg hover:shadow-primary/50 font-display">
               Get Started <ArrowRight size={20} />
             </button>
-            <button className="px-8 py-4 glass text-white rounded-xl font-bold flex items-center gap-2 hover:bg-white/10 transition-all border border-white/10">
+            <button className="px-8 py-4 glass text-white rounded-xl font-semibold tracking-wide flex items-center gap-2 hover:bg-white/10 transition-all border border-white/10 font-display">
               Book a Call
             </button>
           </motion.div>

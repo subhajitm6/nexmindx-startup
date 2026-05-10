@@ -21,7 +21,7 @@ const BlogCard = ({ post, index }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 text-xs font-semibold bg-primary/20 backdrop-blur-md border border-primary/30 text-primary rounded-full uppercase tracking-wider">
+          <span className="px-3 py-1 text-xs font-bold bg-primary/20 backdrop-blur-md border border-primary/30 text-primary rounded-full uppercase tracking-[0.15em] font-display">
             {post.category}
           </span>
         </div>
@@ -29,7 +29,7 @@ const BlogCard = ({ post, index }) => {
 
       {/* Content */}
       <div className="p-6 flex flex-col flex-grow">
-        <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
+        <div className="flex items-center gap-4 text-xs text-slate-500 mb-4 font-medium">
           <div className="flex items-center gap-1">
             <Calendar size={14} className="text-secondary" />
             {post.date}
@@ -44,17 +44,17 @@ const BlogCard = ({ post, index }) => {
           {post.title}
         </h3>
         
-        <p className="text-gray-400 text-sm mb-6 line-clamp-3">
+        <p className="text-slate-400 text-sm mb-6 line-clamp-3 font-medium leading-relaxed">
           {post.description}
         </p>
 
         <div className="mt-auto pt-4 border-t border-white/5">
           <Link
             to={`/blog/${post.id}`}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent transition-colors group/btn"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent transition-colors font-display tracking-wide group/btn"
           >
             Read More
-            <ArrowRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
+            <ArrowRight size={15} className="transition-transform group-hover/btn:translate-x-1" />
           </Link>
         </div>
       </div>

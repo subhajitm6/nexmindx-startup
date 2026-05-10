@@ -50,7 +50,7 @@ const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-gray-400 text-lg"
+            className="text-slate-400 text-lg font-medium"
           >
             We deploy a multi-disciplinary approach to solve complex engineering challenges and deliver premium digital experiences.
           </motion.p>
@@ -74,11 +74,11 @@ const Services = () => {
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed mb-6">
+                <p className="text-slate-400 leading-relaxed mb-6">
                   {service.desc}
                 </p>
                 <div className="mt-auto">
-                  <button className="flex items-center gap-2 text-sm font-bold text-primary group-hover:text-accent transition-colors">
+                  <button className="flex items-center gap-2 text-sm font-semibold text-primary tracking-wide group-hover:text-accent transition-colors font-display">
                     Learn More <ArrowRight size={16} />
                   </button>
                 </div>
