@@ -57,7 +57,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center cursor-pointer"
           >
-            <img src={logo} alt="Nexmind Logo" className="h-12 md:h-14 w-auto object-contain" />
+            <img src={logo} alt="Nexmind Logo" className="h-16 md:h-20 w-auto object-contain" />
           </motion.div>
         </Link>
 

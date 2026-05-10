@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <img src={logo} alt="Nexmind Logo" className="h-10 w-auto object-contain" />
+              <img src={logo} alt="Nexmind Logo" className="h-16 w-auto object-contain" />
             </div>
             <p className="text-gray-500 mb-8 max-w-xs">
               Architecting the next generation of SaaS and AI applications with precision engineering and elite talent.
